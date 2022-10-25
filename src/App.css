@@ -1,38 +1,128 @@
 .App {
   text-align: center;
+  height:auto;
+  width:100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#message{
+  color:red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+body {
+  background-color:rgba(116, 58, 170, 0.514);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#root {
+  height:100vh;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:center;
 }
 
-.App-link {
-  color: #61dafb;
+.Auth {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  height:max(80vh,800px);
+  width:80vw;
+  background-color:aliceblue;
+  border:2px solid black;
+  justify-content:center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  height:30px;
+  margin:20px;
 }
+h3 {
+  font-size:30px;
+  font-weight:400;
+}
+
+
+button{
+  height:30px;
+  width:140px;
+  background-color:whitesmoke;
+  margin:20px;
+  border-radius:20px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.buttons {
+  margin-top:30px;
+}
+
+.logo{
+  width:100px;
+  height:100px;
+}
+
+.header{
+  position:fixed;
+  display:flex;
+  align-items:center;
+  height:100px;
+  top:0;
+  padding-left:30px;
+  width:100vw;
+  background-color:aliceblue;
+  flex-direction:row;
+}
+.topics{
+  background-color:lightcyan;
+  position:fixed;
+  top:100px;
+  height:100vh;
+  width:200px;
+  text-align:left;
+  font-size:20px;
+}
+
+ul {
+  list-style-type: none;
+}
+.topic-list{
+  cursor:pointer;
+  
+}
+
+
+.topic:hover{
+  transform:scale(1.2);
+  color:greenyellow;
+}
+
+.add{
+  width:30px;
+}
+
+.add-div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+
+.add-input{
+  height:20px;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.521);
+}
+.green{
+  background-color: rgba(0, 128, 0, 0.486);
+}
+
+.add-input-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+

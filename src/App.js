@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import {Link} from 'react-router-dom'
+import React, {useState,useEffect} from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {auth} from './firebase-config'
+import { collection, doc, getDocs,getFirestore, setDoc } from "firebase/firestore"
+import { Head } from "./Head"
+import { Side } from "./Side"
+
+
+
+
 
 function App() {
+  const db = getFirestore()
+  const [name,setName] =useState('')
+  const [isAdd,setIsAdd]= useState(false)
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      setName(user.email.split('@')[0])
+    } 
+  })
+
+  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head
+       name={name}/>
+      <Side 
+       name={name}
+       isAdd={isAdd}
+       setIsAdd={setIsAdd}
+      /> 
+    
     </div>
   );
-}
+  }
+
+
 
 export default App;
