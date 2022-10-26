@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import App from "./App";
 import Auth from "./Auth"
+import Auth2 from "./Auth2"
 import React, {useState,useEffect} from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {auth} from './firebase-config'
@@ -16,7 +17,8 @@ const RouteSwitch = ()=>{
         <BrowserRouter>
            <Routes>
              <Route path='/' element={name!='' ? <App />: <Auth />} />
-             <Route path='/auth' element={<Auth />}/>
+             <Route path='/register' element={<Auth />}/>
+             <Route path='/login' element={<Auth2 />}/>
            </Routes>
         </BrowserRouter>
 

@@ -12,13 +12,16 @@ import { Side } from "./Side"
 
 
 function App() {
-  const db = getFirestore()
   const [name,setName] =useState('')
   const [isAdd,setIsAdd]= useState(false)
+  const [url,setUrl] = useState('')
   onAuthStateChanged(auth, user => {
+    console.log(user)
     if (user) {
+      setUrl(user.photoURL)
       setName(user.email.split('@')[0])
-    } 
+      
+    }
   })
 
   
@@ -26,7 +29,9 @@ function App() {
   return (
     <div className="App">
       <Head
-       name={name}/>
+       name={name}
+       url={url}
+       setUrl={setUrl}/>
       <Side 
        name={name}
        isAdd={isAdd}

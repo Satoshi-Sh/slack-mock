@@ -33,6 +33,20 @@ body {
 
 }
 
+.register, .login {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.login input {
+  width:200px;
+}
+.register input{
+  width:200px;
+}
+
 input {
   height:30px;
   margin:20px;
@@ -53,9 +67,15 @@ button{
   cursor:pointer;
 }
 
+button:hover{
+  transform:scale(1.1)
+}
+
 .buttons {
   margin-top:30px;
+
 }
+
 
 .logo{
   width:100px;
@@ -68,19 +88,32 @@ button{
   align-items:center;
   height:100px;
   top:0;
+  gap:20px;
   padding-left:30px;
   width:100vw;
-  background-color:aliceblue;
+  background-color: rgba(114, 98, 98, 0.76);
   flex-direction:row;
+  color:white;
 }
 .topics{
-  background-color:lightcyan;
+  background-color:rgba(122, 22, 122, 0.705);
   position:fixed;
   top:100px;
   height:100vh;
   width:200px;
   text-align:left;
   font-size:20px;
+  color:white;
+}
+
+.add-icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
+}
+
+.add-avatar{
+  cursor:pointer;
 }
 
 ul {
@@ -113,10 +146,10 @@ ul {
 }
 
 .red {
-  background-color: rgba(255, 0, 0, 0.521);
+  background-color: rgba(255, 0, 0, 0.74);
 }
 .green{
-  background-color: rgba(0, 128, 0, 0.486);
+  background-color: rgba(15, 194, 15, 0.781);
 }
 
 .add-input-div{
@@ -124,5 +157,12 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items:center;
+}
+
+.profile {
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  object-fit: cover;
 }
 
