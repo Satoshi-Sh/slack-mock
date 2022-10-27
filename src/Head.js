@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 
   
   if (props?.name!=''){
-    console.log(props)
     
     return (
 <div className='header'>

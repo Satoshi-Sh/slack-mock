@@ -7,6 +7,13 @@ import { collection, doc, getDocs,getFirestore, setDoc } from "firebase/firestor
 
 export function Side (props){
     const db = getFirestore()
+
+    function changeTopic(string){
+      props.topic_value.current=string
+      console.log(string)
+    }
+    
+
     async function getDocuments(db,list){
         const querySnapshot = await getDocs(collection(db,"topics"));
         if (list?.innerHTML==''){
@@ -26,7 +33,7 @@ export function Side (props){
     getDocuments(db,list)
     }
   },[props.name,props.isAdd])
-  
+
   if (props?.name!==''){
     function showInput (){
     const input = document.querySelector('.add-input-div')
@@ -57,7 +64,7 @@ export function Side (props){
 
 return (
 <div className='topics'>
-       <ul className='topic-list'>
+       <ul className='topic-list' onClick={(e)=>changeTopic(e.target.innerText.slice(1,))}>
        </ul>
        <div className='add-div'>
        <div className='add-input-div' style={{display:'none'}}> 
@@ -67,5 +74,5 @@ return (
        </div>
        <button className='add' onClick={showInput}>+</button>
        </div>
-    </div>)
+    </div>   )
   }}

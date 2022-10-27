@@ -74,6 +74,7 @@ button:hover{
 .buttons {
   margin-top:30px;
 
+
 }
 
 
@@ -99,12 +100,16 @@ button:hover{
   background-color:rgba(122, 22, 122, 0.705);
   position:fixed;
   top:100px;
-  height:100vh;
+  bottom:0;
   width:200px;
   text-align:left;
   font-size:20px;
   color:white;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
+
+
 
 .add-icon{
   width:30px;
@@ -143,6 +148,7 @@ ul {
 
 .add-input{
   height:20px;
+  margin-top:20px;
 }
 
 .red {
@@ -153,6 +159,7 @@ ul {
 }
 
 .add-input-div{
+  margin-top:20px;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -165,4 +172,78 @@ ul {
   border-radius:50%;
   object-fit: cover;
 }
+
+.chat
+{
+  background-color:ghostwhite;
+  position:fixed;
+  top:100px;
+  bottom:100px;
+  left:200px;
+  width:100%;
+  overflow-y: scroll;
+  text-align:left;
+  padding:10px;
+}
+
+.message {
+  display:flex;
+  flex-direction:row;
+  background-color:white;
+  height:auto;
+  width:65%;
+  margin:30px;
+  padding:7px;
+  border-radius:10px;
+}
+
+.message-content{
+  padding:7px;
+  margin:30px;
+  font-weight:360;
+  
+}
+
+
+.user-div{
+  display:flex;
+  flex-direction:row;
+  gap:10px;
+  align-items:center;
+}
+.user-name, .time{
+  font-size:18px;
+  font-weight:300;
+  height:5px;
+}
+.avatar{
+  height:45px;
+  width:45px;
+  border-radius:50%;
+  object-fit: cover;
+}
+
+.send{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  align-items: center;
+  position:fixed;
+  left:200px;
+  bottom:0;
+  background-color:gainsboro;
+  height:100px;
+  width:100%;
+}
+
+.message-input{
+  width: 40%;
+  height:50px;
+}
+
+textarea{
+  margin:0 20px;
+  border:none;
+}
+
 
