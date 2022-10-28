@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/slack-mock/static/css/main.3ba1de32.css",
-    "main.js": "/slack-mock/static/js/main.b5fcca9e.js",
+    "main.js": "/slack-mock/static/js/main.abeb4146.js",
     "static/js/787.3991e44f.chunk.js": "/slack-mock/static/js/787.3991e44f.chunk.js",
     "static/media/slack.png": "/slack-mock/static/media/slack.65892b3ce88d3ff8bc35.png",
     "static/media/default.png": "/slack-mock/static/media/default.6c53c0a1c12e6d7eaa36.png",
     "static/media/add_icon.png": "/slack-mock/static/media/add_icon.e96abed4113cf91e5ad9.png",
     "index.html": "/slack-mock/index.html",
     "main.3ba1de32.css.map": "/slack-mock/static/css/main.3ba1de32.css.map",
-    "main.b5fcca9e.js.map": "/slack-mock/static/js/main.b5fcca9e.js.map",
+    "main.abeb4146.js.map": "/slack-mock/static/js/main.abeb4146.js.map",
     "787.3991e44f.chunk.js.map": "/slack-mock/static/js/787.3991e44f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ba1de32.css",
-    "static/js/main.b5fcca9e.js"
+    "static/js/main.abeb4146.js"
   ]
 }
